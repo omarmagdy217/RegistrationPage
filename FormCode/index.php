@@ -1,7 +1,7 @@
 <?php
+    session_start();
 	include_once("./controllers/common.php");
 	include_once("./components/header.php");
-    session_start();
 	$error = "";
     if (safeGet('logout')) {
         session_unset();
