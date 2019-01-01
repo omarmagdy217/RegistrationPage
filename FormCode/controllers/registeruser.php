@@ -27,7 +27,7 @@
 							$emailTo = safeGet('email');
 							$subject = "Welcome";
 							$content = "We are glad to serve you.";
-							$headers = "From: omr.magdy217@gmail.com";
+							$headers = "From: server email";	//add server email
 							if (mail($emailTo, $subject, $content, $headers)) {
 								$successMessage = '<div class="alert alert-success" role="alert">You are signed-up successfully, check your mail inbox!</div>';
 								$_SESSION['success'] = $successMessage;
