@@ -1,7 +1,7 @@
 <?php
+    session_start();
 	include_once("./controllers/common.php");
 	include_once("./models/user.php");
-    session_start();
 	$successMessage = "";
 	$updateError = "";
     if (array_key_exists("id", $_COOKIE)) {
