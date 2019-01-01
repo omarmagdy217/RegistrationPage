@@ -13,3 +13,8 @@
 7. User cannot open profile page without login 
 8. Task should be implemented via php and mysql database
 9. Recommended to implement task with OOP and PDO
+
+- Used technology description:
+
+1. OOP and PDO
+2. For **Hasshing**: password_hash() function
