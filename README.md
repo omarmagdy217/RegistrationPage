@@ -11,5 +11,5 @@
 5. after login should be redirect to update profile page to update all information [name, email, password, photo] all data not mandatory to updated maybe user wanna to update his email only 
 6. User can logout from his account 
 7. User cannot open profile page without login 
-8- Task should be implemented via php and mysql database
-9- Recommended to implement task with OOP and PDO
+8. Task should be implemented via php and mysql database
+9. Recommended to implement task with OOP and PDO
