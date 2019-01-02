@@ -17,7 +17,7 @@
 				$user->save(2);
 			} else {
 				$user->save(1);
-				$updateError = '<div class="alert alert-success" role="alert">Sorry, there was an error updating your photo.</div>';
+				$updateError = '<div class="alert alert-danger" role="alert">Sorry, there was an error updating your photo.</div>';
 				$_SESSION['updateError'] = $updateError;
 				header("Location: ../profile.php?updateError=1");
 			}
