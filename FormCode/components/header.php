@@ -14,6 +14,7 @@
 	.container {
 		width: 400px;
 		margin-top: 120px;
+		margin-bottom: 120px;
 	}
 	.center{
 		text-align: center;
