@@ -22,17 +22,17 @@
 	include("./components/header.php");
 ?>
 
-	<nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+	<nav class="navbar navbar-dark bg-dark fixed-top">
 	  <a class="navbar-brand" href="#"><strong>Profile Page</strong></a>
 	  <div class="div-inline">
 		<button class="btn btn-outline-success my-2 my-sm-0" id="logout">Logout</button>
 	  </div>
 	</nav>
 	
-	<div id="success"><?php echo $successMessage; ?></div>
-	<div id="updateError"><?php echo $updateError; ?></div>
+	<div id="success" style="text-align:center; width: 50%; margin: 70px auto;"><?php echo $successMessage; ?></div>
+	<div id="updateError" style="text-align:center; width: 50%; margin: 70px auto;"><?php echo $updateError; ?></div>
 
-	<div class="container-fluid" style="background-color:white; color:black; margin: 70px auto; border-radius: 5%;">
+	<div class="container-fluid" style="background-color:white; color:black; position:absolute; top:150px; border-radius: 5%;">
 	  <div class="row">
 		<div class="col-sm" style="border-right: 1px yellow solid; margin: 50px auto;">
 			<div class="card" style="border: 2px green solid; border-style: dashed; text-align:center; width: 18rem; margin: 50px auto; display:block;">
