@@ -38,14 +38,9 @@
 			}
 		}
 				
-		public function save($type) {
-			if($type == 2) {
-				$sql = "UPDATE users SET name = ?, email = ?, password = ?, image = ? WHERE id = ?;";
-				Database::$db->prepare($sql)->execute([$this->name, $this->email, $this->password, $this->image, $this->id]);
-			} else if($type == 1) {
-				$sql = "UPDATE users SET name = ?, email = ?, password = ? WHERE id = ?;";
-				Database::$db->prepare($sql)->execute([$this->name, $this->email, $this->password, $this->id]);
-			}
+		public function save() {
+			$sql = "UPDATE users SET name = ?, email = ?, password = ?, image = ? WHERE id = ?;";
+			Database::$db->prepare($sql)->execute([$this->name, $this->email, $this->password, $this->image, $this->id]);
 		}
 
 		public static function check($email) {
