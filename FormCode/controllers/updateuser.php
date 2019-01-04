@@ -8,21 +8,23 @@
 		$user = new User($_SESSION['id']);
 		$user->name = safeGet("updateName");
 		$user->email = safeGet("updateEmail");
-		$hash = password_hash(safeGet("updatePassword"), PASSWORD_DEFAULT);
-		$user->password = $hash;
+		if(safeGet("updatePassword")) {
+			$hash = password_hash(safeGet("updatePassword"), PASSWORD_DEFAULT);
+			$user->password = $hash;
+		}
 		if ($_FILES['updatePhoto']['name']) {
-			$user->image = $_FILES['updatePhoto']['name'];
-			$target = "images/". basename($_FILES["updatePhoto"]["name"]);
+			$target = "C:/xampp/htdocs/form/images/". basename($_FILES["updatePhoto"]["name"]);
 			if (move_uploaded_file($_FILES["updatePhoto"]["tmp_name"], $target)) {
-				$user->save(2);
+				$user->image = $_FILES['updatePhoto']['name'];
+				$user->save();
 			} else {
-				$user->save(1);
+				$user->save();
 				$updateError = '<div class="alert alert-danger" role="alert">Sorry, there was an error updating your photo.</div>';
 				$_SESSION['updateError'] = $updateError;
 				header("Location: ../profile.php?updateError=1");
 			}
 		} else {
-			$user->save(1);
+			$user->save();
 		}
 		header("Location: ../profile.php?updateError=0");
     }
