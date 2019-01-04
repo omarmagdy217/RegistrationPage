@@ -11,6 +11,7 @@
  
 	<script type="text/javascript">
 		$(document).ready(function() {
+			var hash = $("#disabledPassword").val();
 			$(".toggleForms").click(function() {
 				$("#signUpForm").toggle();
 				$("#logInForm").toggle();
@@ -20,8 +21,14 @@
 				window.location.href = "index.php?logout=1";
 			});
 			$('#edit').click(function(event) {
-				$("fieldset").removeAttr("disabled");
-				$("#disabledPassword").val("");
+				if ($("fieldset").attr('disabled')) {
+			        	$("fieldset").removeAttr('disabled');
+			        	$("#disabledPassword").val("");
+				}
+  		              	else {
+                    			$("fieldset").attr('disabled', 'disabled');
+                    			$("#disabledPassword").val(hash);
+                		}
 			});
 			$("#signUpForm").submit(function(e) {
 				var error = "";
