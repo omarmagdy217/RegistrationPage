@@ -21,6 +21,7 @@
 			});
 			$('#edit').click(function(event) {
 				$("fieldset").removeAttr("disabled");
+				$("#disabledPassword").val("");
 			});
 			$("#signUpForm").submit(function(e) {
 				var error = "";
