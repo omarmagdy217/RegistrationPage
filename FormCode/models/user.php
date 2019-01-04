@@ -14,27 +14,23 @@
 		}
 
 		public static function add($name,$email,$password,$photo) {
-			$hash = password_hash($password, PASSWORD_DEFAULT);
-			$sql = "INSERT INTO users (name, email ,password, image) VALUES (?,?,?,?);";
-			$statement = Database::$db->prepare($sql);
-			$statement->execute([$name, $email, $hash, $photo]);
-			if(!$statement) {
-				return 0;
-			}
-			else {
-				$target = "images/". basename($_FILES["photo"]["name"]);
-				$LAST_ID = Database::$db->lastInsertId();
-				if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target)) {
-					$_SESSION['id'] = $LAST_ID;
-					if (safeGet('stayLoggedIn')) {
-						setcookie("id", $LAST_ID, time() + 60*60*24*5,'/');
-					} 
-					return 2;
-				} else {
-					$sql = "DELETE FROM users WHERE id = $LAST_ID;";
-					Database::$db->query($sql);
-					return 1;
+			$target = "images/". basename($_FILES["photo"]["name"]);
+			if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target)) {
+				$hash = password_hash($password, PASSWORD_DEFAULT);
+				$sql = "INSERT INTO users (name, email ,password, image) VALUES (?,?,?,?);";
+				$statement = Database::$db->prepare($sql);
+				$statement->execute([$name, $email, $hash, $photo]);
+				if(!$statement) {
+					return 0;
 				}
+				$LAST_ID = Database::$db->lastInsertId();
+				$_SESSION['id'] = $LAST_ID;
+				if (safeGet('stayLoggedIn')) {
+					setcookie("id", $LAST_ID, time() + 60*60*24*5,'/');
+				} 
+				return 2;
+			} else {
+				return 1;
 			}
 		}
 				
