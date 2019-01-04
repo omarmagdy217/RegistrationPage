@@ -22,17 +22,23 @@
 				$statement->execute([$name, $email, $hash, $photo]);
 				if(!$statement) {
 					return 0;
+				} else if($statement) {
+					$LAST_ID = Database::$db->lastInsertId();
+					if($LAST_ID) {
+						$_SESSION['id'] = $LAST_ID;
+						if (safeGet('stayLoggedIn')) {
+							setcookie("id", $LAST_ID, time() + 60*60*24*5,'/');
+						} 
+						return 2;
+					} else {
+						return 0;
+					}
 				}
-				$LAST_ID = Database::$db->lastInsertId();
-				$_SESSION['id'] = $LAST_ID;
-				if (safeGet('stayLoggedIn')) {
-					setcookie("id", $LAST_ID, time() + 60*60*24*5,'/');
-				} 
-				return 2;
 			} else {
 				return 1;
 			}
 		}
+
 				
 		public function save() {
 			$sql = "UPDATE users SET name = ?, email = ?, password = ?, image = ? WHERE id = ?;";
