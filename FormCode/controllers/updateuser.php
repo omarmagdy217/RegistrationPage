@@ -17,6 +17,7 @@
 			if (move_uploaded_file($_FILES["updatePhoto"]["tmp_name"], $target)) {
 				$user->image = $_FILES['updatePhoto']['name'];
 				$user->save();
+				header("Location: ../profile.php?updateError=0");
 			} else {
 				$user->save();
 				$updateError = '<div class="alert alert-danger" role="alert">Sorry, there was an error updating your photo.</div>';
@@ -25,7 +26,7 @@
 			}
 		} else {
 			$user->save();
+			header("Location: ../profile.php?updateError=0");
 		}
-		header("Location: ../profile.php?updateError=0");
     }
 ?>
