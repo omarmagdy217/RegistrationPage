@@ -30,8 +30,6 @@
 							setcookie("id", $LAST_ID, time() + 60*60*24*5,'/');
 						} 
 						return 2;
-					} else {
-						return 0;
 					}
 				}
 			} else {
