@@ -13,7 +13,7 @@
 			$user->password = $hash;
 		}
 		if ($_FILES['updatePhoto']['name']) {
-			$target = "C:/xampp/htdocs/form/images/". basename($_FILES["updatePhoto"]["name"]);
+			$target = "../images/". basename($_FILES["updatePhoto"]["name"]);
 			if (move_uploaded_file($_FILES["updatePhoto"]["tmp_name"], $target)) {
 				$user->image = $_FILES['updatePhoto']['name'];
 				$user->save();
