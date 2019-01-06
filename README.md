@@ -21,4 +21,4 @@
 - Used technology description:
 
 1. OOP and PDO
-2. For **Hasshing**: password_hash() function
+2. For **Hashing**: password_hash() function
