@@ -14,7 +14,7 @@
 		}
 
 		public static function add($name,$email,$password,$photo) {
-			$target = "images/". basename($_FILES["photo"]["name"]);
+			$target = "../images/". basename($_FILES["photo"]["name"]);
 			if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target)) {
 				$hash = password_hash($password, PASSWORD_DEFAULT);
 				$sql = "INSERT INTO users (name, email ,password, image) VALUES (?,?,?,?);";
