@@ -26,7 +26,7 @@
 						if($upload == 2) {
 							$emailTo = safeGet('email');
 							$subject = "Welcome Mail";
-							$content = "Welcome ".$_POST['username'].", We are glad to serve you.";
+							$content = "Welcome ".$_POST['username'].", we are glad to serve you.";
 							$headers = "From: server email";	//add server email
 							if (mail($emailTo, $subject, $content, $headers)) {
 								$successMessage = '<div class="alert alert-success" role="alert">You are signed-up successfully, check your mail inbox!</div>';
