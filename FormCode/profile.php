@@ -32,7 +32,7 @@
 	<div id="success" style="text-align:center; width: 50%; margin: 70px auto;"><?php echo $successMessage; ?></div>
 	<div id="updateError" style="text-align:center; width: 50%; margin: 70px auto;"><?php echo $updateError; ?></div>
 
-	<div class="container-fluid" style="background-color:white; color:black; position:absolute; top:160px; border-radius: 5%;">
+	<div class="container-fluid" style="background-color:white; color:black; margin-bottom:120px; position:absolute; top:160px; border-radius: 5%;">
 	  <div class="row">
 		<div class="col-sm" style="border-right: 1px yellow solid; margin: 50px auto;">
 			<div class="card" style="border: 2px green solid; border-style: dashed; text-align:center; width: 18rem; margin: 50px auto; display:block;">
