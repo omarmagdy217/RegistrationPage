@@ -1,8 +1,8 @@
 # RegistrationPage
 
-**Link for online website**: [www.formregister.tk](www.formregister.tk)
+**Link for online website**: [www.formregister.tk](http://www.freenom.link/en/index.html?lang=en)
 
-- If link don't respond, then check this one >> [knocked-down-drags.000webhostapp.com](knocked-down-drags.000webhostapp.com)
+- If link don't respond, then check this one >> [knocked-down-drags.000webhostapp.com](http://knocked-down-drags.000webhostapp.com/)
 
 **This a task assigned by INTCore company concering an internship**
 
