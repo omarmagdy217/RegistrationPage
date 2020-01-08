@@ -1,8 +1,8 @@
 # RegistrationPage
 
-**Link for online website**: [ www.formregister.tk](url)
+**Link for online website**: [www.formregister.tk](www.formregister.tk)
 
-- If link don't respond, then check this one >> [knocked-down-drags.000webhostapp.com](url)
+- If link don't respond, then check this one >> [knocked-down-drags.000webhostapp.com](knocked-down-drags.000webhostapp.com)
 
 **This a task assigned by INTCore company concering an internship**
 
