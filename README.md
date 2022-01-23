@@ -4,7 +4,7 @@
 
 - If link don't respond, then check this one >> [knocked-down-drags.000webhostapp.com](http://knocked-down-drags.000webhostapp.com/)
 
-**This a task assigned by INTCore company concering an internship**
+**This a task assigned by INTCore company concerning an internship**
 
 - Task Details:
 
